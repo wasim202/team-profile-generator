@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateHTML = require("./dist/generateHTML");
-const { default: nodeTest } = require("node:test");
-const Engineer = require("./Engineer");
+// const { default: nodeTest } = require("node:test");
+// const Engineer = require("./Engineer");
 
 inquirer
   .prompt([
@@ -29,7 +29,7 @@ inquirer
     {
       type: "list",
       massage: "which type of team member would you like to add? ",
-      name: "engIntlist",
+      name: "engInt-list",
       choices: ["Engineer", "Intern", "I don't want to add any team members"],
     },
   ])
@@ -54,13 +54,14 @@ inquirer
         rapingUp();
         break;
     }
+
     console.log(Response);
   });
 // engneer function
 askengineer();
 {
   const inquirer = require("inquirer");
-  //const fs = require("fs");
+  const fs = require("fs");
 
   inquirer
     .prompt([
@@ -95,7 +96,6 @@ askengineer();
       console.log(Response);
     });
 }
-
 // intern function
 askIntern();
 {
