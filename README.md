@@ -8,3 +8,4 @@ This project is a team profile generator, where the user would be prompted with 
 ![html generate](./dist/images/htmlCreate%202022-09-02%20142943.png)
 
 video linke:
+https://drive.google.com/file/d/18knuY3x6GowSKFZ6GBu6EM4PVfzdr841/view
