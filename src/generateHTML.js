@@ -4,56 +4,61 @@
 //const fs = require("fs");
 
 function renderManager(manager) {
-  return `   
-  <div id="card-manager">
-  <h3>${manager.name}</h3>
-  <h3>Manager</h3>
-  <div id="manager-id">
-    <span>ID: ${manager.id}</span>
-  </div>
-  <div id="manager-email">
-    <span>Email: ${manager.email}</span>
-  </div>
-  <div id="manager-officeNo">
-    <apsn>Office Number: ${manager.officeNumber}</apsn>
-  </div>
-</div>
+  return `  
+  <div class="row"> 
+  <div class="col-4">
+          <div class="card text-bg-primary mb-3" style="max-width: 18rem">
+            <div class="card-header"><h3>${manager.name}</h3></div>
+            <div class="card-body">
+              <h5 class="card-title">Manager</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: ${manager.id}</li>
+                <li class="list-group-item">Email: ${manager.email}</li>
+                <li class="list-group-item">
+                  Office Number: ${manager.officeNumber}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
     `;
 }
 
 function renderEngineer(engineer) {
   return `  
-
-  <div id="card-engineer">
-  <h3>${engineer.name}</h3>
-  <h3>Engineer</h3>
-  <div id="engineer-id">
-     <span>ID: ${engineer.id}</span> 
-  </div> 
-  <div id="engineer-email">
-      <span>Email: ${engineer.email}</span>
+  <div class="col-4">
+  <div class="card text-bg-primary mb-3" style="max-width: 18rem">
+    <div class="card-header"><h3>${engineer.name}</h3></div>
+    <div class="card-body">
+      <h5 class="card-title">Engineer</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">ID: ${engineer.id}</li>
+        <li class="list-group-item">Email: ${engineer.email}</li>
+        <li class="list-group-item">Github: ${engineer.github}</li>
+      </ul>
+    </div>
   </div>
-  <div id="engineer-github">
-      <span>Github: ${engineer.github}</span>
-  </div>
+</div>
 </div>
     `;
 }
 
 function renderIntern(intern) {
   return `  
-  <div id="card-intern">
-  <h3>${intern.name}</h3>
-  <h3>Intern</h3>
-  <div id="intern-id">
-    <span>ID: ${intern.id}</span>
+  <div class="col-4">
+  <div class="card text-bg-primary mb-3" style="max-width: 18rem">
+    <div class="card-header"><h3>${intern.name}</h3></div>
+    <div class="card-body">
+      <h5 class="card-title">Intern</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">ID: ${intern.id}</li>
+        <li class="list-group-item">Email: ${intern.email}</li>
+        <li class="list-group-item">School: ${intern.school}</li>
+      </ul>
+    </div>
   </div>
-  <div id="intern-email">
-    <span>Email: ${intern.email}</span>
-  </div>
-  <div id="intern-school">
-    <span>School: ${intern.school}</span>
-  </div>
+</div>
 </div>
       `;
 }
@@ -101,10 +106,10 @@ module.exports = function (data) {
         break;
     }
     //return card.join(" ");
-    return `
-    ${htmlTop}
-    ${card.join("")}
-    ${htmlBottom}
-    `;
   }
+  return `
+  ${htmlTop}
+  ${card.join("")}
+  ${htmlBottom}
+  `;
 };
