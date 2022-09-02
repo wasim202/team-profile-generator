@@ -1,11 +1,6 @@
-// const manager = require("../Manager");
-// const engineer = require("../Engineer");
-// const intern = require("../Intern");
-//const fs = require("fs");
-
 function renderManager(manager) {
   return `  
-  <div class="row"> 
+  
   <div class="col-4">
           <div class="card text-bg-primary mb-3" style="max-width: 18rem">
             <div class="card-header"><h3>${manager.name}</h3></div>
@@ -21,7 +16,7 @@ function renderManager(manager) {
             </div>
           </div>
         </div>
-        </div>
+       
     `;
 }
 
@@ -40,7 +35,7 @@ function renderEngineer(engineer) {
     </div>
   </div>
 </div>
-</div>
+
     `;
 }
 
@@ -58,8 +53,9 @@ function renderIntern(intern) {
       </ul>
     </div>
   </div>
-</div>
-</div>
+  </div>
+  
+
       `;
 }
 
@@ -84,15 +80,23 @@ module.exports = function (data) {
     <body>
       <header>
         <h1>My Team</h1>
-      </header>`;
-  const htmlBottom = `<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-  crossorigin="anonymous"
-></script>
-<script src="index.js"></script>
+      </header>
+      <br />
+      <br />
+      <div class="container">
+        <div class="row">`;
+  const htmlBottom = `</div>
+  </div>
+  <!-- JavaScript Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"
+  ></script>
+  <script src="index.js"></script>
 </body>
-</html>`;
+</html>
+`;
   for (let i = 0; i < data.length; i++) {
     switch (data[i].getRole()) {
       case "Manager":
