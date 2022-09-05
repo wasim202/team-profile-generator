@@ -8,7 +8,9 @@ function renderManager(manager) {
               <h5 class="card-title">Manager</h5>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${manager.id}</li>
-                <li class="list-group-item">Email: ${manager.email}</li>
+                <li class="list-group-item">Email: 
+                  <a href="mailto:${manager.email}">${manager.email}</a>
+                </li>
                 <li class="list-group-item">
                   Office Number: ${manager.officeNumber}
                 </li>
@@ -29,8 +31,8 @@ function renderEngineer(engineer) {
       <h5 class="card-title">Engineer</h5>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">ID: ${engineer.id}</li>
-        <li class="list-group-item">Email: ${engineer.email}</li>
-        <li class="list-group-item">Github: ${engineer.github}</li>
+        <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
+        <li class="list-group-item">Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
       </ul>
     </div>
   </div>
@@ -48,7 +50,7 @@ function renderIntern(intern) {
       <h5 class="card-title">Intern</h5>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">ID: ${intern.id}</li>
-        <li class="list-group-item">Email: ${intern.email}</li>
+        <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
         <li class="list-group-item">School: ${intern.school}</li>
       </ul>
     </div>
